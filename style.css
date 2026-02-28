@@ -1,0 +1,129 @@
+/* RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #f3e9dc, #ffdada);
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+/* MAIN CONTAINER CENTER */
+.container {
+    width: 100%;
+    max-width: 1200px;
+    text-align: center;
+    animation: fadeIn 1.2s ease forwards;
+}
+
+/* HEADING STYLE */
+.heading {
+    font-size: 25px;
+    margin-bottom: 50px;
+    padding: 15px 40px;
+    display: inline-block;
+    border-radius: 50px;
+    border: 2px solid #000000;
+    background: linear-gradient(90deg, #000000, #f8bfbf);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.4);
+    letter-spacing: 2px;
+}
+
+/* GRID LAYOUT */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px 40px;
+    justify-items: center;
+}
+
+/* SOCIAL ITEM */
+.social-item {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    text-decoration: none;
+    animation: slideUp 0.8s ease forwards;
+    opacity: 0;
+}
+
+/* ICON IMAGE */
+.icon-img {
+    width: 40px;
+    height: 40px;
+    object-fit: contain;
+    transition: 0.3s ease;
+}
+
+/* BAR STYLE */
+.bar {
+    min-width: 320px;
+    background: #000000;
+    color: white;
+    padding: 18px 25px;
+    border-radius: 50px;
+    border: 2px solid #d4af37;
+    font-size: 15px;
+    letter-spacing: 1px;
+    transition: 0.3s ease;
+}
+
+/* HOVER EFFECT */
+.social-item:hover .bar {
+    background: #152038;
+    box-shadow: 0 0 15px rgba(212, 175, 55, 0.5);
+}
+
+.social-item:hover .icon-img {
+    transform: scale(1.1);
+}
+
+/* ANIMATIONS */
+@keyframes fadeIn {
+    from { opacity: 0; transform: scale(0.95); }
+    to { opacity: 1; transform: scale(1); }
+}
+
+@keyframes slideUp {
+    from { opacity: 0; transform: translateY(30px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* MOBILE RESPONSIVE */
+@media (max-width: 768px) {
+
+    body {
+        padding: 20px;
+    }
+
+    .grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .bar {
+        min-width: 250px;
+        font-size: 14px;
+        padding: 15px 20px;
+    }
+
+    .icon-img {
+        width: 40px;
+        height: 40px;
+    }
+
+    .heading {
+        font-size: 22px;
+        padding: 10px 25px;
+        margin-bottom: 30px;
+    }
+}
